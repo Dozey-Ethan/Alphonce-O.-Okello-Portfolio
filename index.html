@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphonce Odhiambo Okello - Portfolio</title>
+    </title>
+    <link rel="icon" type="image/x-icon" href="https://media.licdn.com/dms/image/v2/D4D03AQEMJH0lw27Pjg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1697895965142?e=2147483647&v=beta&t=SM73vVuGp78OG1LyCT_c1zkKRkM8BheLg-HndgpWiIM">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure it takes full viewport height */
+            margin: 0;
+            padding: 1rem; /* Add some padding for smaller screens */
+        }
+        .card-container {
+            perspective: 1000px; /* For 3D transform effects */
+        }
+        .profile-card {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeInScale 0.8s ease-out forwards; /* Initial animation */
+        }
+
+        /* Animation for initial load */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Hover effects */
+        .profile-card:hover {
+            transform: translateY(-10px) rotateX(2deg) rotateY(-2deg); /* Lift and subtle tilt */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Stronger shadow */
+        }
+
+        .profile-card:hover .profile-image {
+            transform: scale(1.05); /* Slightly enlarge image on hover */
+        }
+
+        .profile-image {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 3rem;
+            height: 4px;
+            background-color: #3b82f6; /* Blue underline */
+            border-radius: 9999px; /* Rounded corners for the underline */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="card-container w-full max-w-xl">
+        <div class="profile-card bg-white rounded-3xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300">
+            <!-- Profile Header -->
+            <div class="flex flex-col items-center text-center mb-6">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEMJH0lw27Pjg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1697895965142?e=2147483647&v=beta&t=SM73vVuGp78OG1LyCT_c1zkKRkM8BheLg-HndgpWiIM" alt="Profile Image" class="profile-image w-36 h-36 rounded-full object-cover border-4 border-blue-500 shadow-md mb-4">
+                <h1 class="text-4xl font-bold text-gray-900 mb-1">Alphonce Odhiambo</h1>
+                <p class="text-xl text-blue-600 font-semibold">Teacher of English and Literature</p>
+                <p class="text-md text-gray-600">Currently at: Viraj International Academy</p>
+            </div>
+
+            <!-- Summary Section -->
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 section-title mb-3">Summary</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    -Teacher of English and Literature | AS & A Level English Language | IGCSE 0500 First Language English | 0475 Literature | EF SET Certified | IELTS Certified and TEFL Teacher.</p>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 section-title mb-3">Experience</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Viraj International Academy - Full-time</h3>
+                        <p class="text-md text-gray-700">Teacher of English and Literature | May 2025 - Present<br>Nairobi, Kenya</p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm mt-1">
+                            <li>Establishing positive classroom environment to encourage critical thinking skills and respect for all individuals.</li>
+                            <li>Develop and implement creative lesson plans to engage students in active learning.</li>
+                            <li>Assist with extra-curricular activities such as clubs or sports after school hours.</li>
+                            <li>Maintain accurate record of students' attendance.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">The Stepping Stones Elementary School - Contract</h3>
+                        <p class="text-md text-gray-700">English Teacher | May 2023 - Present<br>Kitengela, Kajiado County, Kenya</p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm mt-1">
+                            <li>Establishing positive classroom environment to encourage critical thinking skills and respect for all individuals.</li>
+                            <li>Develop and implement creative lesson plans to engage students in active learning.</li>
+                            <li>Assist with extra-curricular activities such as clubs or sports after school hours.</li>
+                            <li>Maintain accurate record of students' attendance.</li>
+                            <li><b>Skills:</b>English as a Second Language (ESL), Classroom Management, Microsoft Office, Written Communication, Analytical Skills.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">The Stepping Stones Elementary School - Full-time</h3>
+                        <p class="text-md text-gray-700">English Second Language Teacher | May 2023 - May 2025 - 2yrs 1mo<br>Kitengela, Kajiado County, Kenya</p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm mt-1">
+                            <li>Establishing positive classroom environment to encourage critical thinking skills and respect for all individuals.</li>
+                            <li>Develop and implement creative lesson plans to engage students in active learning.</li>
+                            <li>Assist with extra-curricular activities such as clubs or sports after school hours.</li>
+                            <li>Maintain accurate record of students' attendance.</li>
+                            <li><b>Skills:</b>Microsoft Office, Written Communication, Grades 7-12</li>
+                        </ul>
+                    </div>
+                    <!-- Add more experience entries as needed -->
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 section-title mb-3">Education</h2>
+                <div class="space-y-2">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Laikipia University</h3>
+                        <p class="text-md text-gray-700">Bachelor of Arts | 2016 - 2020 | Second Class Upper Division<br>Activities and Societies: Football, Gender, Environment</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Laikipia University</h3>
+                        <p class="text-md text-gray-700">Bachelor's degree | 2016 - 2020 | Secondary Education and Teaching</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 section-title mb-3">Skills</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Written Communication</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Microsoft Office</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Classroom Management</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Analytical Skills</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Grades 7-12</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Problem Solving</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">English</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Microsoft Office</span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm">English as a Second Language (ESL)</span>
+
+
+
+                    <!-- Add more skills as needed -->
+                </div>
+            </section>
+            <br>
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 section-title mb-3">Contacts</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm"><a href="mailto:example@example.com">Email Me</a></span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm"><a href="tel:+">Call Me</a></span>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full shadow-sm"><a href="https://www.linkedin.com/in/odhiambo-alphonce-86a259195/?trk=public-profile-join-page" target="new-tab">My LinkedIn Profile</a></span>
+                </div>
+            </section>
+        </div>
+        <footer class="text-center mt-8 text-gray-500 text-sm">
+            <p>&copy; 2025 Alphonce Odhiambo Okello.</p>
+            <p></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
